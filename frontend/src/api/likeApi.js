@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:9292/api/posts";
+const BASE_URL = `${import.meta.env.VITE_API_URL}/api/posts`;
 
 const token = () => localStorage.getItem("token");
 
@@ -11,7 +11,7 @@ const authHeader = () => ({
 });
 
 export const likePost = (postId, userId) =>
-  axios.post(
+ axios.post(
     `${BASE_URL}/${postId}/like/${userId}`,
     {},
     authHeader()

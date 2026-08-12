@@ -21,9 +21,9 @@ export const uploadProfileImage = (userId, file) => {
 };
 
 export const getProfileImageUrl = (imageName) => {
-  return `http://localhost:9292/api/image/${imageName}`;
+  return `${import.meta.env.VITE_API_URL}/api/image/${imageName}`;
 };
 
 export function getUserImageUrl(imageName) {
-  return `http://localhost:9292/api/image/${imageName}`;
+  return `${import.meta.env.VITE_API_URL}/api/image/${imageName}`;
 }

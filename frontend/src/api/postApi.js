@@ -47,7 +47,7 @@ export const uploadPostImage = (postId, file) => {
 
 // Builds the URL to actually display an uploaded image.
 export function getImageUrl(imageName) {
-  return `http://localhost:9292/posts/image/${imageName}`;
+  return `${import.meta.env.VITE_API_URL}/posts/image/${imageName}`;
 }
 
 export function getPostsByCategory(categoryId) {
