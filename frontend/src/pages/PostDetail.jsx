@@ -237,9 +237,9 @@ function PostDetail() {
         </div>
       )}
 
-      <p className="content">
-        {post.content}
-      </p>
+     <p style={{ whiteSpace: "pre-wrap" }}>
+    {post.content}
+</p>
 
       <hr className="divider" />
 
